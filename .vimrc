@@ -63,6 +63,12 @@ filetype plugin indent on " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" try to make putty colorful
+if &term =~ "xterm"
+	"256 color --
+	let &t_Co = 256
+endif
 set laststatus=2
 let g:lightline = { 
 	\ 'colorscheme': 'powerline',
