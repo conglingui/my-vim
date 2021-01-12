@@ -34,6 +34,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -53,7 +54,7 @@ Plugin 'itchyny/vim-gitbranch'
 call vundle#end() " required
 filetype plugin indent on " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList - lists configured plugins
@@ -82,3 +83,12 @@ let g:lightline = {
 	\ }
 
 set noshowmode
+
+" vimwiki setting 
+let wiki_main = {}
+let wiki_main.path = '~/vimwiki/'
+let wiki_main.path_html = '~/../var/www/html/' 
+let wiki_main.auto_toc = 1
+
+let g:vimwiki_list = [wiki_main]
+let g:vimwiki_valid_html_tags = 'img,h1,div'
